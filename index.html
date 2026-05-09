@@ -28,7 +28,7 @@
   /* Index Navigation */
   .index-nav {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(9, 1fr);
     gap: 4px;
     background: #FFFFFF;
     border: 0.5px solid rgba(0,0,0,0.12);
@@ -409,6 +409,7 @@
 <nav class="index-nav" id="index-nav">
 <button data-target="sec0" class="active"><span class="icon-num">★</span>한눈 정리</button>
 <button data-target="sec1"><span class="icon-num">A</span>절세 시뮬</button>
+<button data-target="sec8"><span class="icon-num">A</span>노란우산</button>
 <button data-target="sec2"><span class="icon-num">A</span>수령 요건</button>
 <button data-target="sec3"><span class="icon-num">A</span>해지 vs 만기</button>
 <button data-target="sec4"><span class="icon-num">B</span>이득형 비교</button>
@@ -477,7 +478,7 @@
 <tbody>
 <tr><td class="label">법령 근거</td><td>조특법 §86의3</td><td>소득법 §59의3</td><td>소득법 §59의3</td><td>조특법 §91의18</td></tr>
 <tr><td class="label">절세 방식</td><td class="info">소득공제</td><td class="info">세액공제</td><td class="info">세액공제</td><td>이자·배당 비과세</td></tr>
-<tr><td class="label">한도</td><td>200~500만</td><td>600만</td><td>합산 900만</td><td>일반 200만/서민 400만</td></tr>
+<tr><td class="label">한도</td><td>200~600만</td><td>600만</td><td>합산 900만</td><td>일반 200만/서민 400만</td></tr>
 <tr><td class="label">의무 기간</td><td>—</td><td>55세+5년</td><td>55세+5년</td><td>3년</td></tr>
 <tr><td class="label">중도해지 패널티</td><td class="bad">기타소득세 16.5%</td><td class="bad">기타소득세 16.5%</td><td class="bad">기타소득세 16.5%</td><td>비과세 박탈</td></tr>
 <tr><td class="label">부분인출</td><td>일부 가능 (대출)</td><td class="good">○ 가능</td><td class="bad">법정사유만</td><td class="good">○ 자유</td></tr>
@@ -499,7 +500,7 @@
 <div style="background: #E6F1FB; border-radius: 12px; padding: 14px;">
 <div style="font-size: 11px; color: #0C447C; opacity: 0.7; margin-bottom: 4px;">우선순위 1</div>
 <div style="font-size: 13px; font-weight: 500; color: #0C447C; margin-bottom: 6px;">노란우산공제 (월 5~100만)</div>
-<div style="font-size: 12px; color: #0C447C; line-height: 1.5;">소득공제 200~500만원 (사업소득 구간별). 개인사업자 대표 전용. 폐업·노령 시 일시금 또는 분할 수령.</div>
+<div style="font-size: 12px; color: #0C447C; line-height: 1.5;">소득공제 200~600만원 (사업소득 구간별, 2026 시행). 개인사업자 대표 전용. 폐업·노령 시 일시금 또는 분할 수령.</div>
 </div>
 
 <div style="background: #E6F1FB; border-radius: 12px; padding: 14px;">
@@ -534,7 +535,7 @@
 
 </div>
 
-<p style="font-size: 14px; font-weight: 500; margin: 24px 0 8px;">사업소득 구간별 추천 매트릭스</p>
+<p style="font-size: 14px; font-weight: 500; margin: 24px 0 8px;">사업소득 구간별 추천 매트릭스 <span style="font-size: 11px; color: #185FA5; background: #E6F1FB; padding: 2px 8px; border-radius: 4px; margin-left: 6px;">2026 시행 기준</span></p>
 <div class="compare-table">
 <table>
 <thead>
@@ -548,25 +549,25 @@
 <tbody>
 <tr>
 <td class="label">4,000만원 이하</td>
-<td class="info">노란우산 500만 (전액 공제)</td>
+<td class="info">노란우산 600만 (NEW)</td>
 <td class="info">연금저축 600만 (16.5% 환급)</td>
 <td>IRP 300만</td>
 </tr>
 <tr>
-<td class="label">4,000만~6,000만</td>
-<td class="info">노란우산 300만</td>
+<td class="label">4,000만~6,000만 (NEW)</td>
+<td class="info">노란우산 500만 (NEW)</td>
 <td class="info">연금저축 + IRP 합산 900만</td>
 <td class="good">ISA 200만 비과세</td>
 </tr>
 <tr>
 <td class="label">6,000만~1억</td>
-<td class="info">노란우산 300만</td>
+<td class="info">노란우산 400만 (NEW)</td>
 <td class="info">연금저축 + IRP 900만 (13.2%)</td>
 <td class="good">ISA + 저축성보험</td>
 </tr>
 <tr>
 <td class="label">1억 초과 (고소득)</td>
-<td class="info">노란우산 200만 (한도 축소)</td>
+<td class="info">노란우산 200만</td>
 <td class="info">연금저축 + IRP 900만</td>
 <td class="good">종신형 연금보험 (한도 없음)</td>
 </tr>
@@ -575,11 +576,14 @@
 </div>
 
 <div class="info-box" style="background: #FFFFFF; border: 0.5px solid rgba(0,0,0,0.12); margin-top: 12px;">
-<p style="color: #1A1A1A; line-height: 1.6;"><strong>노란우산공제 소득공제 한도</strong> (조특법 §86의3)</p>
-<p>· 사업소득금액 <strong>4,000만원 이하</strong>: 연 <strong>500만원</strong> 한도</p>
-<p>· 사업소득금액 <strong>4,000만 ~ 1억원 이하</strong>: 연 <strong>300만원</strong> 한도</p>
-<p>· 사업소득금액 <strong>1억원 초과</strong>: 연 <strong>200만원</strong> 한도</p>
-<p>· 법인 대표는 총급여 7천만↓일 때만 가능. 일반 근로자는 가입 ✗</p>
+<p style="color: #1A1A1A; line-height: 1.6;"><strong>노란우산공제 소득공제 한도 — 2025.1.1. 이후 납입분 (2026년 신고 적용)</strong></p>
+<p>· 사업소득금액 <strong>4,000만원 이하</strong>: 연 <strong>600만원</strong> 한도 (월 50만)</p>
+<p>· 사업소득금액 <strong>4,000만 ~ 6,000만 이하</strong>: 연 <strong>500만원</strong> 한도 (월 약 42만) <span style="color: #185FA5;">⭐ NEW 구간</span></p>
+<p>· 사업소득금액 <strong>6,000만 ~ 1억원 이하</strong>: 연 <strong>400만원</strong> 한도 (월 약 34만)</p>
+<p>· 사업소득금액 <strong>1억원 초과</strong>: 연 <strong>200만원</strong> 한도 (월 약 17만)</p>
+<p style="margin-top: 8px;">· 법인대표자: 총급여 <strong>8,000만원 이하</strong> (2025년 7천만→8천만 상향). 8천만 초과 시 공제 불가</p>
+<p>· 부동산임대업 소득은 제외 (2019.1.1. 이후 가입자)</p>
+<p style="font-size: 11px; color: #999; margin-top: 8px;">법령: 조세특례제한법 §86의3 (법률 제20617호, 2024.12.31. / 법률 제20778호, 2025.3.14.)</p>
 </div>
 
 <div class="info-box">
@@ -1441,6 +1445,152 @@
 </div>
 </section>
 
+<section id="sec8">
+<h2><span style="font-size: 11px; color: #185FA5; font-weight: 500; padding: 3px 8px; background: #E6F1FB; border-radius: 4px; margin-right: 6px;">A 절세형</span> 노란우산공제 절세 시뮬레이터</h2>
+
+<div class="badge-info">
+<div class="title">2026 시행 — 4구간 한도 (조특법 §86의3, 2025.1.1.~ 납입분)</div>
+<table>
+<tr><td>4,000만 ↓</td><td>한도 <strong>600만원</strong> (월 50만)</td></tr>
+<tr><td>4,000~6,000만</td><td>한도 <strong>500만원</strong> (월 약 42만) ⭐ NEW 구간</td></tr>
+<tr><td>6,000만~1억</td><td>한도 <strong>400만원</strong> (월 약 34만)</td></tr>
+<tr><td>1억 초과</td><td>한도 <strong>200만원</strong> (월 약 17만)</td></tr>
+</table>
+</div>
+
+<div class="input-card">
+<div class="input-header">
+<label>사업소득금액</label>
+<span class="hint">매출액 − 필요경비</span>
+</div>
+<div class="slider-row">
+<input type="range" min="20000000" max="300000000" step="1000000" value="50000000" id="ny-income">
+<span class="value" id="ny-income-out">50,000,000원</span>
+</div>
+<div class="warn-text" id="ny-tier" style="color: #185FA5;">현재 구간: 4,000만~6,000만 → 한도 500만원</div>
+</div>
+
+<div class="input-card">
+<div class="input-header">
+<label>월 납입액</label>
+<span class="hint">월 5~100만 (1만원 단위)</span>
+</div>
+<div class="slider-row">
+<input type="range" min="50000" max="1000000" step="10000" value="500000" id="ny-monthly">
+<span class="value" id="ny-monthly-out">500,000원</span>
+</div>
+<div class="warn-text" id="ny-warn"></div>
+</div>
+
+<div class="input-card">
+<div class="input-header">
+<label>납입 기간 (예상)</label>
+</div>
+<div class="slider-row">
+<input type="range" min="1" max="30" step="1" value="10" id="ny-years">
+<span class="value" id="ny-years-out">10년</span>
+</div>
+</div>
+
+<div class="input-card">
+<div class="input-header">
+<label>공시이율 (복리 적립)</label>
+<span class="hint">2025년 기준 약 3.0%, 매년 변동</span>
+</div>
+<div class="slider-row">
+<input type="range" min="2" max="4.5" step="0.1" value="3" id="ny-rate">
+<span class="value" id="ny-rate-out">3.0%</span>
+</div>
+</div>
+
+<div class="metric-grid">
+<div class="metric">
+<div class="label">연 납입액</div>
+<div class="value" id="ny-annual">6,000,000</div>
+<div class="unit">원 (월×12)</div>
+</div>
+<div class="metric">
+<div class="label">연 공제 적용액</div>
+<div class="value" id="ny-deductible">5,000,000</div>
+<div class="unit">원 (한도 내)</div>
+</div>
+<div class="metric highlight">
+<div class="label">연 절세 효과</div>
+<div class="value" id="ny-saving">1,320,000</div>
+<div class="unit">원 (지방세 포함)</div>
+</div>
+</div>
+
+<div class="compare-table">
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th class="col-info">납입 단계</th>
+<th class="col-good">만기 수령 단계</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="label">기간</td>
+<td id="ny-period">10년 납입</td>
+<td>폐업·노령(60세, 10년) 시</td>
+</tr>
+<tr>
+<td class="label">총 납입원금</td>
+<td id="ny-total-paid">60,000,000</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="label">총 공제 적용액</td>
+<td id="ny-total-deduct">50,000,000</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="label">누적 절세액</td>
+<td class="info" id="ny-total-saving">+13,200,000</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="label">복리 만기 평가액</td>
+<td>—</td>
+<td id="ny-maturity">68,940,000</td>
+</tr>
+<tr>
+<td class="label">수령 시 세금</td>
+<td>—</td>
+<td id="ny-withdraw-tax">−1,000,000</td>
+</tr>
+<tr class="total-row">
+<td class="label">최종 손익</td>
+<td colspan="2" style="text-align: center;" id="ny-net">+81,140,000원 (납입원금 대비)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="chart-wrap">
+<p>연도별 누적 절세 효과</p>
+<div class="chart-canvas-wrap">
+<canvas id="ny-chart" role="img" aria-label="연도별 누적 절세 효과 차트">노란우산 누적 절세액 곡선.</canvas>
+</div>
+</div>
+
+<div class="net-result info" id="ny-recommendation">
+<div class="header">💡 결론 및 추천</div>
+<div id="ny-rec-text" style="font-size: 13px; line-height: 1.7;">계산 중...</div>
+</div>
+
+<div class="info-box">
+<p>· <strong>월 납입 권장액</strong>: 자동으로 사업소득 구간별 한도에 맞춰 권장. 월 납입액이 한도보다 많으면 초과분은 공제 ✗</p>
+<p>· <strong>복리 적립</strong>: 납입원금에 복리이자 적용. 일반 예금과 달리 이자소득세 별도 부과 ✗ (수령 시 퇴직소득 과세)</p>
+<p>· <strong>수령 시 과세</strong>: 폐업·노령(60세 이상 + 10년 납입)·사망·퇴임 시 퇴직소득세 적용 (저율). 일반 해지 시 기타소득세 16.5%</p>
+<p>· <strong>압류 보호</strong>: 「소기업·소상공인 지원을 위한 특별조치법」 §9에 따라 압류·양도·담보 금지. 사업 실패 시에도 적립금 보전</p>
+<p>· <strong>대출 가능</strong>: 납입원금의 90%까지 저금리 대출. 긴급 자금 필요 시 해지 없이 활용 가능</p>
+<p style="margin-top: 8px;">· <strong>주의 — 임의해지 시</strong>: 그동안 받았던 소득공제 전액 추징 + 기타소득세 16.5% 분리과세. 절대 비추천</p>
+</div>
+</section>
+
 <footer>
 <div>본 솔루션은 의뢰인(개인사업자) 상담용 참고자료입니다.</div>
 <div>법령 기준일: 2026.05 / 근거: 소득세법 §16, §59의3, §64의4, §129, §143의2 / 시행령 §25, §40의2, §40의3 / 조세특례제한법 §86의3(노란우산)</div>
@@ -2223,6 +2373,175 @@
     window.addEventListener('load', function(){ if (typeof Chart !== 'undefined') initViChart(); });
   }
   updateVi();
+})();
+
+(function(){
+  var fmt = function(n){ return Math.round(n).toLocaleString('ko-KR'); };
+  var nyIncome = document.getElementById('ny-income');
+  var nyMonthly = document.getElementById('ny-monthly');
+  var nyYears = document.getElementById('ny-years');
+  var nyRate = document.getElementById('ny-rate');
+
+  function getNyLimit(income){
+    if (income <= 40000000) return { limit: 6000000, tier: '4,000만 이하', tierColor: '#185FA5' };
+    if (income <= 60000000) return { limit: 5000000, tier: '4,000만~6,000만 (NEW 구간)', tierColor: '#185FA5' };
+    if (income <= 100000000) return { limit: 4000000, tier: '6,000만~1억', tierColor: '#185FA5' };
+    return { limit: 2000000, tier: '1억 초과', tierColor: '#BA7517' };
+  }
+
+  function getMarginalTaxRate(income){
+    if (income <= 14000000) return 6.6;
+    if (income <= 50000000) return 16.5;
+    if (income <= 88000000) return 26.4;
+    if (income <= 150000000) return 38.5;
+    if (income <= 300000000) return 41.8;
+    if (income <= 500000000) return 44.0;
+    if (income <= 1000000000) return 46.2;
+    return 49.5;
+  }
+
+  var nyChart;
+  function initNyChart(){
+    var ctx = document.getElementById('ny-chart').getContext('2d');
+    nyChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: [],
+        datasets: [
+          { label: '누적 절세액', data: [], borderColor: '#185FA5', backgroundColor: 'rgba(53, 138, 221, 0.12)', fill: true, tension: 0.1, pointRadius: 3, borderWidth: 2 },
+          { label: '복리 평가액', data: [], borderColor: '#3B6D11', backgroundColor: 'rgba(59, 109, 17, 0.08)', fill: false, tension: 0.1, pointRadius: 3, borderWidth: 2 }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: true, position: 'bottom', labels: { font: { size: 11 } } },
+          tooltip: { callbacks: { label: function(ctx){ return ctx.dataset.label + ': ' + fmt(ctx.parsed.y) + '원'; } } }
+        },
+        scales: {
+          x: { ticks: { color: '#888780', font: { size: 11 } }, grid: { color: 'rgba(136,135,128,0.15)' } },
+          y: { min: 0, ticks: { callback: function(v){ return (v/10000) + '만'; }, color: '#888780', font: { size: 11 } }, grid: { color: 'rgba(136,135,128,0.15)' } }
+        }
+      }
+    });
+  }
+
+  function updateNy(){
+    var income = parseInt(nyIncome.value, 10);
+    var monthly = parseInt(nyMonthly.value, 10);
+    var years = parseInt(nyYears.value, 10);
+    var rate = parseFloat(nyRate.value);
+
+    document.getElementById('ny-income-out').textContent = fmt(income) + '원';
+    document.getElementById('ny-monthly-out').textContent = fmt(monthly) + '원';
+    document.getElementById('ny-years-out').textContent = years + '년';
+    document.getElementById('ny-rate-out').textContent = rate.toFixed(1) + '%';
+
+    var tierInfo = getNyLimit(income);
+    var tierEl = document.getElementById('ny-tier');
+    tierEl.textContent = '현재 구간: ' + tierInfo.tier + ' → 한도 ' + fmt(tierInfo.limit) + '원';
+    tierEl.style.color = tierInfo.tierColor;
+
+    var taxRate = getMarginalTaxRate(income);
+    var annualPay = monthly * 12;
+    var deductible = Math.min(annualPay, tierInfo.limit);
+
+    var warnEl = document.getElementById('ny-warn');
+    warnEl.textContent = '';
+    warnEl.classList.remove('warn-active');
+    if (annualPay > tierInfo.limit){
+      var over = annualPay - tierInfo.limit;
+      warnEl.textContent = '⚠ 연 ' + fmt(over) + '원은 한도 초과로 공제 ✗ (한도 ' + fmt(tierInfo.limit) + '원)';
+      warnEl.classList.add('warn-active');
+    }
+
+    var annualSaving = deductible * taxRate / 100;
+
+    document.getElementById('ny-annual').textContent = fmt(annualPay);
+    document.getElementById('ny-deductible').textContent = fmt(deductible);
+    document.getElementById('ny-saving').textContent = fmt(annualSaving);
+
+    var totalPaid = annualPay * years;
+    var totalDeductible = deductible * years;
+    var totalSaving = annualSaving * years;
+
+    document.getElementById('ny-period').textContent = years + '년 납입';
+    document.getElementById('ny-total-paid').textContent = fmt(totalPaid);
+    document.getElementById('ny-total-deduct').textContent = fmt(totalDeductible);
+    document.getElementById('ny-total-saving').textContent = '+' + fmt(totalSaving);
+
+    var r = rate / 100;
+    var maturity;
+    if (r === 0){
+      maturity = totalPaid;
+    } else {
+      maturity = annualPay * ((Math.pow(1 + r, years) - 1) / r);
+    }
+
+    var profit = maturity - totalPaid;
+    var withdrawTax = profit * 0.165;
+    var receivedAmount = maturity - withdrawTax;
+
+    document.getElementById('ny-maturity').textContent = fmt(maturity);
+    document.getElementById('ny-withdraw-tax').textContent = '−' + fmt(withdrawTax) + ' (가정)';
+
+    var net = totalSaving + receivedAmount - totalPaid;
+    document.getElementById('ny-net').textContent = '+' + fmt(net) + '원 (절세 + 만기수령액 − 납입원금)';
+
+    var labels = [];
+    var savingData = [];
+    var maturityData = [];
+    for (var y = 1; y <= years; y++){
+      labels.push(y + '년차');
+      savingData.push(annualSaving * y);
+      var mv;
+      if (r === 0){
+        mv = annualPay * y;
+      } else {
+        mv = annualPay * ((Math.pow(1 + r, y) - 1) / r);
+      }
+      maturityData.push(mv);
+    }
+    if (nyChart){
+      nyChart.data.labels = labels;
+      nyChart.data.datasets[0].data = savingData;
+      nyChart.data.datasets[1].data = maturityData;
+      nyChart.update('none');
+    }
+
+    var rec = document.getElementById('ny-rec-text');
+    var monthlyRec;
+    if (tierInfo.limit === 6000000) monthlyRec = 500000;
+    else if (tierInfo.limit === 5000000) monthlyRec = 420000;
+    else if (tierInfo.limit === 4000000) monthlyRec = 340000;
+    else monthlyRec = 170000;
+
+    var html = '<strong style="color:#0C447C;">사업소득 ' + fmt(income) + '원 → 권장 월 납입액 약 ' + fmt(monthlyRec) + '원</strong><br>';
+    html += '· 한계세율 ' + taxRate + '% 적용 시 연 절세 <strong>' + fmt(deductible * taxRate / 100) + '원</strong><br>';
+    html += '· ' + years + '년 납입 시 누적 절세 <strong>+' + fmt(totalSaving) + '원</strong> + 복리 평가액 <strong>' + fmt(maturity) + '원</strong><br>';
+    if (annualPay > tierInfo.limit){
+      html += '<span style="color:#BA7517;">⚠ 현재 월 ' + fmt(monthly) + '원은 한도 초과. 권장 월 ' + fmt(monthlyRec) + '원으로 조정 권장</span>';
+    } else if (annualPay < tierInfo.limit){
+      var possibleAdd = tierInfo.limit - annualPay;
+      html += '<span style="color:#27500A;">💡 한도까지 연 ' + fmt(possibleAdd) + '원 더 납입 가능 → 추가 절세 ' + fmt(possibleAdd * taxRate / 100) + '원</span>';
+    } else {
+      html += '<span style="color:#27500A;">✓ 한도 정확히 채움. 최적 납입액</span>';
+    }
+    rec.innerHTML = html;
+  }
+
+  nyIncome.addEventListener('input', updateNy);
+  nyMonthly.addEventListener('input', updateNy);
+  nyYears.addEventListener('input', updateNy);
+  nyRate.addEventListener('input', updateNy);
+
+  if (typeof Chart !== 'undefined') {
+    initNyChart();
+  } else {
+    window.addEventListener('load', function(){ if (typeof Chart !== 'undefined') initNyChart(); });
+  }
+  updateNy();
 })();
 </script>
 </body>
