@@ -1581,6 +1581,115 @@
 <div id="ny-rec-text" style="font-size: 13px; line-height: 1.7;">계산 중...</div>
 </div>
 
+<p style="font-size: 14px; font-weight: 500; margin: 24px 0 8px;">⚠ 폐업 시 함정 — 수령 시점이 절세를 좌우</p>
+
+<div class="net-result danger" style="margin-bottom: 12px;">
+<div class="header">반드시 알아야 할 두 가지 함정 (조특법 §86의3 ④항)</div>
+<table style="width: 100%; font-size: 13px; color: #791F1F;">
+<tr><td style="padding: 4px 0; width: 80px;">함정 ①</td><td style="padding: 4px 0;"><strong>폐업일 이후 납입한 부금</strong>은 소득공제 ✗</td></tr>
+<tr><td style="padding: 4px 0;">함정 ②</td><td style="padding: 4px 0;"><strong>공제금 수령 연도에 납입한 부금</strong>도 소득공제 ✗</td></tr>
+<tr><td style="padding: 4px 0;">함정 ③</td><td style="padding: 4px 0;">폐업 후 계속 납입 시 이자도 감액 (1년 이내 1/2, 1년 초과 1/4)</td></tr>
+</table>
+</div>
+
+<div class="input-card">
+<div class="input-header">
+<label>폐업 예정 월 (가정)</label>
+<span class="hint">2025년 기준</span>
+</div>
+<div class="slider-row">
+<input type="range" min="1" max="12" step="1" value="6" id="closure-month">
+<span class="value" id="closure-month-out">6월</span>
+</div>
+</div>
+
+<div class="input-card">
+<div class="input-header">
+<label>월 납입액</label>
+</div>
+<div class="slider-row">
+<input type="range" min="50000" max="1000000" step="10000" value="500000" id="closure-monthly">
+<span class="value" id="closure-monthly-out">500,000원</span>
+</div>
+</div>
+
+<div class="input-card">
+<div class="input-header">
+<label>적용 한계세율 (지방세 포함)</label>
+</div>
+<div class="rate-tabs three" id="closure-rate-tabs">
+<button data-rate="16.5" class="active" id="cr-low">
+<div>16.5%</div>
+<div>4,500만 이하</div>
+</button>
+<button data-rate="26.4" id="cr-mid">
+<div>26.4%</div>
+<div>5,000만~8,800만</div>
+</button>
+<button data-rate="38.5" id="cr-high">
+<div>38.5%</div>
+<div>8,800만~1.5억</div>
+</button>
+</div>
+</div>
+
+<div class="compare-table">
+<table>
+<thead>
+<tr>
+<th>시나리오</th>
+<th class="col-bad">시나리오 A<br>폐업 후 계속 납입 +<br>당해 연도 수령</th>
+<th class="col-info">시나리오 B<br>폐업 시점 납입 중단 +<br>당해 연도 수령</th>
+<th class="col-good">시나리오 C ⭐<br>폐업 시점 납입 중단 +<br>다음 연도 수령 (정석)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="label">2025년 납입금</td>
+<td id="sc-a-paid">6,000,000</td>
+<td id="sc-b-paid">3,000,000</td>
+<td id="sc-c-paid">3,000,000</td>
+</tr>
+<tr>
+<td class="label">2025년 소득공제 가능액</td>
+<td class="bad" id="sc-a-deduct">0</td>
+<td class="bad" id="sc-b-deduct">0</td>
+<td class="good" id="sc-c-deduct">3,000,000</td>
+</tr>
+<tr>
+<td class="label">2025년 절세액</td>
+<td class="bad" id="sc-a-saving">0</td>
+<td class="bad" id="sc-b-saving">0</td>
+<td class="good" id="sc-c-saving">+792,000</td>
+</tr>
+<tr>
+<td class="label">폐업 후 납입분 손실</td>
+<td class="bad" id="sc-a-loss">−이자 감액</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr class="total-row">
+<td class="label">절세 효과 비교</td>
+<td class="bad" id="sc-a-total">기준 (최악)</td>
+<td id="sc-b-total">+0원</td>
+<td class="good" id="sc-c-total">+792,000원 ⭐</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="net-result success">
+<div class="header">✓ 정석 시나리오 (시나리오 C)</div>
+<div id="closure-rec-text" style="font-size: 13px; line-height: 1.7;">계산 중...</div>
+</div>
+
+<div class="info-box">
+<p>· <strong>실무 핵심</strong>: 폐업이 결정되면 즉시 자동이체 중단 → 다음 연도 1월 이후 공제금 신청. 단순한 절차지만 수십~수백만 원 절세 차이.</p>
+<p>· <strong>전업·법인전환 시</strong>: 부금통산 신청 가능 (전 계약 부금을 후 계약으로 합산). 단, 공제금 이미 수령했으면 통산 불가.</p>
+<p>· <strong>임의해지 시 (폐업 외)</strong>: 해약환급금이 기타소득세 16.5% 원천징수. 기타소득금액 300만 이상이면 종합소득세 합산.</p>
+<p>· <strong>폐업 시 적용이율</strong>: 일반 공시이율 + 0.3%p 가산 (폐업·사망 시 우대). 2025년 4분기 기준 연 3.3%</p>
+</div>
+
 <div class="info-box">
 <p>· <strong>월 납입 권장액</strong>: 자동으로 사업소득 구간별 한도에 맞춰 권장. 월 납입액이 한도보다 많으면 초과분은 공제 ✗</p>
 <p>· <strong>복리 적립</strong>: 납입원금에 복리이자 적용. 일반 예금과 달리 이자소득세 별도 부과 ✗ (수령 시 퇴직소득 과세)</p>
@@ -1589,6 +1698,246 @@
 <p>· <strong>대출 가능</strong>: 납입원금의 90%까지 저금리 대출. 긴급 자금 필요 시 해지 없이 활용 가능</p>
 <p style="margin-top: 8px;">· <strong>주의 — 임의해지 시</strong>: 그동안 받았던 소득공제 전액 추징 + 기타소득세 16.5% 분리과세. 절대 비추천</p>
 </div>
+
+<p style="font-size: 14px; font-weight: 500; margin: 28px 0 8px;">📦 부금통산 — 사업 변경 시 가입기간 승계</p>
+
+<div class="badge-info">
+<div class="title">부금통산이란? (노란우산공제 약관)</div>
+<table>
+<tr><td>대상</td><td><strong>전업 또는 법인전환을 위한 폐업</strong>의 경우</td></tr>
+<tr><td>효과</td><td>전 계약의 납입부금을 후 계약으로 <strong>합산 신청</strong> 가능</td></tr>
+<tr><td>제한</td><td>종전계약의 공제금·해약환급금을 <strong>이미 수령했으면 ✗</strong></td></tr>
+<tr><td>부금 연체</td><td>전 계약 부금연체 없어야 신청 가능</td></tr>
+</table>
+</div>
+
+<div class="input-card">
+<div class="input-header">
+<label>전 계약 가입 기간</label>
+<span class="hint">기존 사업체에서 납입한 기간</span>
+</div>
+<div class="slider-row">
+<input type="range" min="1" max="20" step="1" value="5" id="bt-prev-years">
+<span class="value" id="bt-prev-years-out">5년</span>
+</div>
+</div>
+
+<div class="input-card">
+<div class="input-header">
+<label>월 납입액</label>
+</div>
+<div class="slider-row">
+<input type="range" min="50000" max="1000000" step="10000" value="500000" id="bt-monthly">
+<span class="value" id="bt-monthly-out">500,000원</span>
+</div>
+</div>
+
+<div class="input-card">
+<div class="input-header">
+<label>예정 추가 가입 기간 (신규 사업체)</label>
+</div>
+<div class="slider-row">
+<input type="range" min="1" max="20" step="1" value="5" id="bt-new-years">
+<span class="value" id="bt-new-years-out">5년</span>
+</div>
+</div>
+
+<div class="compare-table">
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th class="col-bad">A. 통산 ✗ (수령 후 신규)</th>
+<th class="col-good">B. 통산 ○ (수령 전 통산)</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class="label">전 계약 누적 납입</td><td id="bt-a-prev">30,000,000</td><td id="bt-b-prev">30,000,000</td></tr>
+<tr><td class="label">전 계약 처리</td><td class="bad">공제금 수령 (퇴직소득세)</td><td class="good">후 계약으로 합산</td></tr>
+<tr><td class="label">신규 가입 시점</td><td class="bad">납부 회차 1회부터 시작</td><td class="good">전 계약 회차 그대로 승계</td></tr>
+<tr><td class="label">신규 추가 납입</td><td id="bt-a-new">30,000,000</td><td id="bt-b-new">30,000,000</td></tr>
+<tr><td class="label">최종 누적 부금월수</td><td class="bad" id="bt-a-months">60회</td><td class="good" id="bt-b-months">120회 ⭐</td></tr>
+<tr><td class="label">노령(60세) 분할수령 자격</td><td class="bad">120회 미달 → 일시금만</td><td class="good">120회 충족 → 분할 가능</td></tr>
+<tr class="total-row">
+<td class="label">복리 만기 평가액 (가정)</td>
+<td id="bt-a-maturity">62,500,000</td>
+<td class="good" id="bt-b-maturity">68,940,000</td>
+</tr>
+<tr class="diff-row">
+<td class="label">통산 효과</td>
+<td colspan="2" style="text-align: center;" id="bt-diff">+6,440,000원 (B가 A보다 유리)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="info-box">
+<p>· <strong>핵심</strong>: 전 사업장 폐업 후 신규 사업장 시작할 계획이라면, <strong>공제금 수령 전</strong>에 부금통산 신청해야 합니다. 한 번이라도 받으면 통산 ✗</p>
+<p>· <strong>노령 분할수령 자격 (60세 + 1,000만 + 120회)</strong>: 통산 시 회차가 승계되므로 분할 자격 빨리 도달</p>
+<p>· <strong>제출 서류</strong>: 신규 가입 시 청약서 + 부금통산 신청서 + 폐업사실증명원 + 사업자등록증 (신규)</p>
+</div>
+
+<p style="font-size: 14px; font-weight: 500; margin: 28px 0 8px;">⚖️ 노란우산 vs 연금저축 — 같은 600만원의 절세 차이</p>
+
+<div class="input-card">
+<div class="input-header">
+<label>비교용 사업소득금액</label>
+</div>
+<div class="slider-row">
+<input type="range" min="20000000" max="300000000" step="1000000" value="50000000" id="vs-income">
+<span class="value" id="vs-income-out">50,000,000원</span>
+</div>
+<div class="warn-text" style="color: #185FA5;" id="vs-tax-rate">한계세율: 16.5% (지방세 포함)</div>
+</div>
+
+<div class="compare-table">
+<table>
+<thead>
+<tr>
+<th>비교 항목</th>
+<th class="col-info">노란우산공제</th>
+<th class="col-info">연금저축</th>
+<th>비고</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class="label">절세 방식</td><td>소득공제</td><td>세액공제</td><td>구조 다름</td></tr>
+<tr><td class="label">기준 한도</td><td id="vs-ny-limit">500만원</td><td>600만원</td><td>구간별</td></tr>
+<tr><td class="label">납입 한도까지 채울 시 절세</td><td class="info" id="vs-ny-saving">+1,320,000</td><td class="info" id="vs-ps-saving">+792,000</td><td>한계세율 영향</td></tr>
+<tr><td class="label">중복 가능 여부</td><td colspan="2" class="good" style="text-align: center;">✓ 두 상품 동시 적용 가능 (국세청 유권해석)</td><td>합치면 시너지</td></tr>
+<tr><td class="label">투자 방식</td><td>공시이율 복리 (~3.3%)</td><td class="good">ETF·펀드 자유 운용</td><td>수익률 자율</td></tr>
+<tr><td class="label">중도해지 패널티</td><td>기타소득세 16.5%</td><td>기타소득세 16.5%</td><td>동일</td></tr>
+<tr><td class="label">부분인출</td><td>대출 90% 가능</td><td class="good">○ 직접 인출</td><td>유연성 차이</td></tr>
+<tr><td class="label">압류 보호</td><td class="good">○ 법적 보호</td><td class="bad">✗</td><td>노란우산 우위</td></tr>
+<tr><td class="label">수령 시 과세</td><td>퇴직소득세 (저율)</td><td>연금소득세 3.3~5.5%</td><td>모두 저율</td></tr>
+<tr><td class="label">수령 시작</td><td>폐업 또는 60세+10년</td><td>55세+5년</td><td>차이 있음</td></tr>
+<tr><td class="label">상속 시</td><td class="good">상속재산</td><td>상속재산</td><td>모두 상속됨</td></tr>
+<tr class="total-row">
+<td class="label">⭐ 두 상품 동시 가입 시 절세</td>
+<td colspan="2" class="good" style="text-align: center;" id="vs-combined">+2,112,000원/年 (노란우산 + 연금저축 동시 적용)</td>
+<td>최강 조합</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="net-result info">
+<div class="header">💡 핵심 비교 포인트</div>
+<div style="font-size: 13px; line-height: 1.7;">
+<strong>노란우산공제는 "안전망 + 절세"</strong> — 압류 보호 + 폐업 시 확실한 수령 + 소득공제. 단, 수익률은 공시이율(약 3%)로 제한.<br>
+<strong>연금저축은 "투자 + 절세"</strong> — ETF로 자유 운용하여 수익률 ↑ 가능 + 세액공제. 단, 압류 보호 ✗ + 55세+5년 룰.<br>
+<strong>결론</strong>: <span style="color:#27500A;">⭐ 두 상품 모두 가입하는 것이 정답</span>. 국세청 유권해석상 중복 적용 가능. 노란우산은 "사업 안전망", 연금저축은 "노후 투자"로 역할 분리.
+</div>
+</div>
+
+<p style="font-size: 14px; font-weight: 500; margin: 28px 0 8px;">💰 수령 방식 비교 — 일시금 vs 분할</p>
+
+<div class="badge-info">
+<div class="title">분할 수령 자격 (3가지 모두 충족)</div>
+<table>
+<tr><td>연령</td><td>만 <strong>60세 이상</strong></td></tr>
+<tr><td>납입 금액</td><td>공제금 <strong>1,000만원 이상</strong> (대출 차감 후)</td></tr>
+<tr><td>납입 회차</td><td><strong>120회 이상</strong> (10년 이상)</td></tr>
+<tr><td>대상 사유</td><td>폐업 또는 노령 (질병·부상 퇴임 포함)</td></tr>
+</table>
+</div>
+
+<div class="input-card">
+<div class="input-header">
+<label>예상 공제금 수령액</label>
+</div>
+<div class="slider-row">
+<input type="range" min="20000000" max="200000000" step="1000000" value="80000000" id="rcv-amount">
+<span class="value" id="rcv-amount-out">80,000,000원</span>
+</div>
+</div>
+
+<div class="input-card">
+<div class="input-header">
+<label>분할 수령 기간 (선택 시)</label>
+</div>
+<div class="slider-row">
+<input type="range" min="3" max="20" step="1" value="10" id="rcv-period">
+<span class="value" id="rcv-period-out">10년</span>
+</div>
+</div>
+
+<div class="input-card">
+<div class="input-header">
+<label>분할 수령 시 적용 이자 (분할기간 적립이자율)</label>
+<span class="hint">분할 미수령액에 적용</span>
+</div>
+<div class="slider-row">
+<input type="range" min="2" max="4" step="0.1" value="2.5" id="rcv-rate">
+<span class="value" id="rcv-rate-out">2.5%</span>
+</div>
+</div>
+
+<div class="compare-table">
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th class="col-info">일시금 수령</th>
+<th class="col-good">분할 수령</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="label">수령 방식</td>
+<td>한 번에 전액 수령</td>
+<td id="rcv-period-detail">10년간 균등 분할</td>
+</tr>
+<tr>
+<td class="label">월 수령액 (분할)</td>
+<td>—</td>
+<td id="rcv-monthly">약 666,667원/월</td>
+</tr>
+<tr>
+<td class="label">총 수령액 (이자 포함)</td>
+<td id="rcv-lump-total">80,000,000</td>
+<td class="good" id="rcv-split-total">90,800,000</td>
+</tr>
+<tr>
+<td class="label">퇴직소득세 부담</td>
+<td class="bad">한 번에 누진세</td>
+<td class="good">매년 분산 → 평균 세율 ↓</td>
+</tr>
+<tr>
+<td class="label">자금 운용 방식</td>
+<td class="good">자유 (직접 투자/예금)</td>
+<td>중기중앙회가 운용 (안정)</td>
+</tr>
+<tr>
+<td class="label">사망 시</td>
+<td>이미 수령 완료</td>
+<td class="bad">잔여분 상속재산</td>
+</tr>
+<tr>
+<td class="label">유리한 케이스</td>
+<td>다른 자산 운용 능력 ○</td>
+<td class="good">노후 안정 현금흐름 필요</td>
+</tr>
+<tr class="total-row">
+<td class="label">최종 수령 차액</td>
+<td colspan="2" style="text-align: center;" id="rcv-diff">+10,800,000원 (분할이 추가 이자만큼 유리)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="net-result info">
+<div class="header">💡 어느 게 유리한가?</div>
+<div id="rcv-rec" style="font-size: 13px; line-height: 1.7;">계산 중...</div>
+</div>
+
+<div class="info-box">
+<p>· <strong>분할 수령 신청 시점</strong>: 공제금 청구 시 일시금/분할 선택. 한 번 결정하면 변경 어려움.</p>
+<p>· <strong>퇴직소득세 절세 효과</strong>: 일시금은 한 번에 누진세 적용, 분할은 매년 분산되어 평균 세율 낮아짐. 고액 수령일수록 분할이 유리.</p>
+<p>· <strong>분할 vs 일시금 + 직접 운용</strong>: 본인이 연 4% 이상 안정적으로 운용 가능하다면 일시금이 유리할 수 있음. 그렇지 않으면 분할 권장.</p>
+<p>· <strong>혼합 전략</strong>: 일부는 일시금(긴급 자금) + 일부는 분할 (생활비) 가능 여부는 노란우산 1666-9988에 직접 확인 필요.</p>
+</div>
+
 </section>
 
 <footer>
@@ -2542,6 +2891,263 @@
     window.addEventListener('load', function(){ if (typeof Chart !== 'undefined') initNyChart(); });
   }
   updateNy();
+})();
+
+(function(){
+  var fmt = function(n){ return Math.round(n).toLocaleString('ko-KR'); };
+  var closureRate = 16.5;
+  var closureMonth = document.getElementById('closure-month');
+  var closureMonthly = document.getElementById('closure-monthly');
+  var crLow = document.getElementById('cr-low');
+  var crMid = document.getElementById('cr-mid');
+  var crHigh = document.getElementById('cr-high');
+
+  function setClosureRate(rate, on, off1, off2){
+    closureRate = rate;
+    on.classList.add('active');
+    off1.classList.remove('active');
+    off2.classList.remove('active');
+    updateClosure();
+  }
+
+  function updateClosure(){
+    var month = parseInt(closureMonth.value, 10);
+    var monthly = parseInt(closureMonthly.value, 10);
+
+    document.getElementById('closure-month-out').textContent = month + '월';
+    document.getElementById('closure-monthly-out').textContent = fmt(monthly) + '원';
+
+    // 시나리오 A: 폐업 후 계속 납입 (12개월 전체) + 당해 수령
+    // 폐업 사유 발생 → 그 해 납입분 전체 소득공제 ✗
+    var scA_paid = monthly * 12;
+    var scA_deduct = 0;
+    var scA_saving = 0;
+
+    // 시나리오 B: 폐업 시점 납입 중단 + 당해 수령
+    // 폐업 사유 발생 → 그 해 납입분 전체 소득공제 ✗
+    var scB_paid = monthly * month;
+    var scB_deduct = 0;
+    var scB_saving = 0;
+
+    // 시나리오 C: 폐업 시점 납입 중단 + 다음 연도 수령 (정석)
+    // 폐업 연도(2025) 납입분 그대로 공제 가능
+    var scC_paid = monthly * month;
+    var scC_deduct = scC_paid;
+    var scC_saving = scC_deduct * closureRate / 100;
+
+    document.getElementById('sc-a-paid').textContent = fmt(scA_paid);
+    document.getElementById('sc-b-paid').textContent = fmt(scB_paid);
+    document.getElementById('sc-c-paid').textContent = fmt(scC_paid);
+
+    document.getElementById('sc-a-deduct').textContent = '0';
+    document.getElementById('sc-b-deduct').textContent = '0';
+    document.getElementById('sc-c-deduct').textContent = fmt(scC_deduct);
+
+    document.getElementById('sc-a-saving').textContent = '0';
+    document.getElementById('sc-b-saving').textContent = '0';
+    document.getElementById('sc-c-saving').textContent = '+' + fmt(scC_saving);
+
+    // 시나리오 A의 폐업 후 납입분 이자 손실 추정
+    var afterClosurePaid = monthly * (12 - month);
+    document.getElementById('sc-a-loss').textContent = '−이자 감액 (1년내 1/2)';
+
+    document.getElementById('sc-a-total').textContent = '기준 (최악)';
+    document.getElementById('sc-b-total').textContent = '+0원';
+    document.getElementById('sc-c-total').textContent = '+' + fmt(scC_saving) + '원 ⭐';
+
+    // 추천 메시지
+    var rec = document.getElementById('closure-rec-text');
+    var html = '<strong style="color:#27500A;">2025년 ' + month + '월 폐업 가정 시 정석 절차</strong><br>';
+    html += '· <strong>Step 1</strong>: 폐업 즉시 노란우산 자동이체 중단 (인터넷 마이페이지 또는 1666-9988)<br>';
+    html += '· <strong>Step 2</strong>: 2025년 종합소득세 신고 시 ' + month + '월까지 납입한 ' + fmt(scC_paid) + '원 그대로 소득공제<br>';
+    html += '· <strong>Step 3</strong>: 2026년 1월 이후 공제금 청구 → 2025년 절세 ' + fmt(scC_saving) + '원 + 2026년 수령 시 퇴직소득세 (저율 과세)<br>';
+    html += '<br>';
+    html += '<span style="background: #FAEEDA; padding: 2px 6px; border-radius: 4px; color: #854F0B;">⚠ 주의</span> 폐업 후 자동이체 그대로 두면 → 그 부금은 소득공제 ✗ + 이자 감액. 자동이체 중단이 핵심.<br>';
+    html += '<span style="background: #E6F1FB; padding: 2px 6px; border-radius: 4px; color: #0C447C;">💡 팁</span> 시나리오 B와 C 차이는 단지 "수령 신청 시점"뿐. 절차상 12월 31일 이후로 미루기만 하면 됨.';
+
+    rec.innerHTML = html;
+  }
+
+  crLow.addEventListener('click', function(){ setClosureRate(16.5, crLow, crMid, crHigh); });
+  crMid.addEventListener('click', function(){ setClosureRate(26.4, crMid, crLow, crHigh); });
+  crHigh.addEventListener('click', function(){ setClosureRate(38.5, crHigh, crLow, crMid); });
+  closureMonth.addEventListener('input', updateClosure);
+  closureMonthly.addEventListener('input', updateClosure);
+
+  updateClosure();
+})();
+
+// 부금통산 시뮬레이터
+(function(){
+  var fmt = function(n){ return Math.round(n).toLocaleString('ko-KR'); };
+  var btPrev = document.getElementById('bt-prev-years');
+  var btMonthly = document.getElementById('bt-monthly');
+  var btNew = document.getElementById('bt-new-years');
+
+  function updateBt(){
+    var prevYears = parseInt(btPrev.value, 10);
+    var monthly = parseInt(btMonthly.value, 10);
+    var newYears = parseInt(btNew.value, 10);
+    var rate = 0.033;
+
+    document.getElementById('bt-prev-years-out').textContent = prevYears + '년';
+    document.getElementById('bt-monthly-out').textContent = fmt(monthly) + '원';
+    document.getElementById('bt-new-years-out').textContent = newYears + '년';
+
+    var prevPaid = monthly * 12 * prevYears;
+    var newPaid = monthly * 12 * newYears;
+    var totalMonths = (prevYears + newYears) * 12;
+
+    document.getElementById('bt-a-prev').textContent = fmt(prevPaid);
+    document.getElementById('bt-b-prev').textContent = fmt(prevPaid);
+    document.getElementById('bt-a-new').textContent = fmt(newPaid);
+    document.getElementById('bt-b-new').textContent = fmt(newPaid);
+    document.getElementById('bt-a-months').textContent = (newYears * 12) + '회';
+    document.getElementById('bt-b-months').textContent = totalMonths + '회 ⭐';
+
+    // A: 전계약 수령 후 신규 → 신규 가입분만 복리
+    var annual = monthly * 12;
+    var aMaturity;
+    if (rate === 0){
+      aMaturity = newPaid;
+    } else {
+      // 전계약 일시금 + 신규 적립 (이자 가정 안 함, 단순)
+      var newCompound = annual * ((Math.pow(1 + rate, newYears) - 1) / rate);
+      aMaturity = prevPaid + newCompound; // 전계약은 받은 후 보관 (이자 없음 가정)
+    }
+
+    // B: 부금통산 → 전계약+신규 모두 합쳐서 계속 복리
+    var bMaturity;
+    if (rate === 0){
+      bMaturity = prevPaid + newPaid;
+    } else {
+      bMaturity = annual * ((Math.pow(1 + rate, prevYears + newYears) - 1) / rate);
+    }
+
+    document.getElementById('bt-a-maturity').textContent = fmt(aMaturity);
+    document.getElementById('bt-b-maturity').textContent = fmt(bMaturity);
+
+    var diff = bMaturity - aMaturity;
+    var sign = diff >= 0 ? '+' : '−';
+    document.getElementById('bt-diff').textContent = sign + fmt(Math.abs(diff)) + '원 (B가 A보다 ' + (diff >= 0 ? '유리' : '불리') + ')';
+  }
+
+  btPrev.addEventListener('input', updateBt);
+  btMonthly.addEventListener('input', updateBt);
+  btNew.addEventListener('input', updateBt);
+  updateBt();
+})();
+
+// 노란우산 vs 연금저축 비교 시뮬레이터
+(function(){
+  var fmt = function(n){ return Math.round(n).toLocaleString('ko-KR'); };
+  var vsIncome = document.getElementById('vs-income');
+
+  function getNyLimit(income){
+    if (income <= 40000000) return 6000000;
+    if (income <= 60000000) return 5000000;
+    if (income <= 100000000) return 4000000;
+    return 2000000;
+  }
+
+  function getMarginalTaxRate(income){
+    if (income <= 14000000) return 6.6;
+    if (income <= 50000000) return 16.5;
+    if (income <= 88000000) return 26.4;
+    if (income <= 150000000) return 38.5;
+    if (income <= 300000000) return 41.8;
+    if (income <= 500000000) return 44.0;
+    if (income <= 1000000000) return 46.2;
+    return 49.5;
+  }
+
+  function getPensionCreditRate(income){
+    return income <= 45000000 ? 16.5 : 13.2;
+  }
+
+  function updateVs(){
+    var income = parseInt(vsIncome.value, 10);
+    document.getElementById('vs-income-out').textContent = fmt(income) + '원';
+
+    var taxRate = getMarginalTaxRate(income);
+    document.getElementById('vs-tax-rate').textContent = '한계세율: ' + taxRate + '% (지방세 포함)';
+
+    var nyLimit = getNyLimit(income);
+    var nySaving = nyLimit * taxRate / 100;
+
+    var psLimit = 6000000;
+    var psCreditRate = getPensionCreditRate(income);
+    var psSaving = psLimit * psCreditRate / 100;
+
+    document.getElementById('vs-ny-limit').textContent = fmt(nyLimit / 10000) + '만원';
+    document.getElementById('vs-ny-saving').textContent = '+' + fmt(nySaving);
+    document.getElementById('vs-ps-saving').textContent = '+' + fmt(psSaving);
+
+    var combined = nySaving + psSaving;
+    document.getElementById('vs-combined').textContent = '+' + fmt(combined) + '원/年 (노란우산 + 연금저축 동시 적용)';
+  }
+
+  vsIncome.addEventListener('input', updateVs);
+  updateVs();
+})();
+
+// 수령 방식 비교 시뮬레이터
+(function(){
+  var fmt = function(n){ return Math.round(n).toLocaleString('ko-KR'); };
+  var rcvAmount = document.getElementById('rcv-amount');
+  var rcvPeriod = document.getElementById('rcv-period');
+  var rcvRate = document.getElementById('rcv-rate');
+
+  function updateRcv(){
+    var amount = parseInt(rcvAmount.value, 10);
+    var period = parseInt(rcvPeriod.value, 10);
+    var rate = parseFloat(rcvRate.value) / 100;
+
+    document.getElementById('rcv-amount-out').textContent = fmt(amount) + '원';
+    document.getElementById('rcv-period-out').textContent = period + '년';
+    document.getElementById('rcv-rate-out').textContent = (rate * 100).toFixed(1) + '%';
+
+    var monthly = amount / period / 12;
+
+    // 분할 수령 시 잔여분에 이자 적용 (단순 평균)
+    // 실제로는 매달 잔액에 이자 적립. 평균 잔액 = amount / 2 추정
+    var avgBalance = amount / 2;
+    var totalInterest = avgBalance * rate * period;
+    var splitTotal = amount + totalInterest;
+
+    document.getElementById('rcv-period-detail').textContent = period + '년간 균등 분할';
+    document.getElementById('rcv-monthly').textContent = '약 ' + fmt(monthly) + '원/월';
+    document.getElementById('rcv-lump-total').textContent = fmt(amount);
+    document.getElementById('rcv-split-total').textContent = fmt(splitTotal);
+
+    var diff = splitTotal - amount;
+    var sign = diff >= 0 ? '+' : '−';
+    document.getElementById('rcv-diff').textContent = sign + fmt(Math.abs(diff)) + '원 (분할이 추가 이자만큼 유리)';
+
+    var rec = document.getElementById('rcv-rec');
+    var html = '';
+    if (amount < 100000000){
+      html = '<strong style="color:#185FA5;">→ 일시금 권장</strong> (수령액 1억 미만)<br>';
+      html += '· 분할 시 추가 이자 ' + fmt(diff) + '원이지만 본인이 직접 운용 시 더 큰 수익 가능<br>';
+      html += '· 부동산·주식 등 활용 자산 있다면 일시금이 유리';
+    } else if (amount < 200000000){
+      html = '<strong style="color:#0C447C;">→ 케이스별 판단</strong> (수령액 1~2억)<br>';
+      html += '· 다른 자산·연금 충분 → 일시금 + 직접 운용<br>';
+      html += '· 안정적 노후 현금흐름 필요 → 분할 (월 ' + fmt(monthly) + '원)<br>';
+      html += '· 퇴직소득세 부담 줄이려면 → 분할 (누진세 분산)';
+    } else {
+      html = '<strong style="color:#27500A;">→ 분할 권장</strong> (수령액 2억 이상)<br>';
+      html += '· 일시금 시 퇴직소득세 누진 부담 큼 → 분할로 평균 세율 ↓<br>';
+      html += '· 추가 이자 ' + fmt(diff) + '원 + 안정적 노후 현금흐름<br>';
+      html += '· 분할기간 동안 잔여분도 압류 보호 유지';
+    }
+    rec.innerHTML = html;
+  }
+
+  rcvAmount.addEventListener('input', updateRcv);
+  rcvPeriod.addEventListener('input', updateRcv);
+  rcvRate.addEventListener('input', updateRcv);
+  updateRcv();
 })();
 </script>
 </body>
